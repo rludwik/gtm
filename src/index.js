@@ -10,6 +10,7 @@ import App from "./App";
 import Expenses from "./routes/expenses";
 import Invoices from "./routes/invoices";
 import Subscribe from "./routes/subscribe";
+import ContactUs from "./routes/contact";
 
 import reportWebVitals from './reportWebVitals';
 
@@ -20,6 +21,7 @@ root.render(
       <Route path="/" element={<App />}>
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />} />
+        <Route path="contact" element={<ContactUs />} />
       </Route>
       <Route path="subscribe" element={<Subscribe />} />
     </Routes>

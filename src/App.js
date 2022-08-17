@@ -13,6 +13,7 @@ function App() {
       >
         <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/expenses">Expenses</Link> |{" "}
+        <Link to="/contact">Contact Us</Link> |{" "}
         <Link to="/subscribe">Subscribe</Link>
       </nav>
       <Outlet />
