@@ -9,6 +9,13 @@ const addToCart = () => {
    });
 }
 
+const addToDataLayer = (incomingData) => {
+  window.dataLayer.push({
+    'event': 'page change',
+    'page_changed_to': incomingData
+   });
+}
+
 function App() {
   return (
     <div>
@@ -19,10 +26,10 @@ function App() {
           paddingBottom: "1rem",
         }}
       >
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link> |{" "}
-        <Link to="/contact">Contact Us</Link> |{" "}
-        <Link to="/subscribe">Subscribe</Link>
+        <Link onClick={addToDataLayer("Invoices")} to="/invoices">Invoices</Link> |{" "}
+        <Link onClick={addToDataLayer("Expenses")} to="/expenses">Expenses</Link> |{" "}
+        <Link onClick={addToDataLayer("Contact Us")} to="/contact">Contact Us</Link> |{" "}
+        <Link onClick={addToDataLayer("Subscribe")} to="/subscribe">Subscribe</Link>
       </nav>
       <Outlet />
       <button onClick={addToCart()}>Add to Cart</button>
