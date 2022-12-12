@@ -26,13 +26,13 @@ function App() {
           paddingBottom: "1rem",
         }}
       >
-        <Link onClick={addToDataLayer("Invoices")} to="/invoices">Invoices</Link> |{" "}
-        <Link onClick={addToDataLayer("Expenses")} to="/expenses">Expenses</Link> |{" "}
-        <Link onClick={addToDataLayer("Contact Us")} to="/contact">Contact Us</Link> |{" "}
-        <Link onClick={addToDataLayer("Subscribe")} to="/subscribe">Subscribe</Link>
+        <Link onClick={() => addToDataLayer("Invoices")} to="/invoices">Invoices</Link> |{" "}
+        <Link onClick={() => addToDataLayer("Expenses")} to="/expenses">Expenses</Link> |{" "}
+        <Link onClick={() => addToDataLayer("Contact Us")} to="/contact">Contact Us</Link> |{" "}
+        <Link onClick={() => addToDataLayer("Subscribe")} to="/subscribe">Subscribe</Link>
       </nav>
       <Outlet />
-      <button onClick={addToCart()}>Add to Cart</button>
+      <button onClick={addToCart}>Add to Cart</button>
     </div>
   );
 }
